@@ -1,77 +1,89 @@
-import HeroSectionCirculerLine from '../../assets/HeroSectionCirculerLine.svg';
-import HeroSectionMain from '../../assets/HeroSectionMain.svg';
-import HeroSectionMainBG from '../../assets/HeroSectionMainBG.svg';
-import LikeSVG from '../../assets/Like.svg';
-import LoudSpeakarSVG from '../../assets/LoudSpeaker.svg';
-import Button from '../ui/Button';
+import HeroSectionCirculerLine from "../../assets/HeroSectionCirculerLine.svg";
+import HeroSectionMain from "../../assets/HeroSectionMain.svg";
+import HeroSectionMainBG from "../../assets/HeroSectionMainBG.svg";
+import LikeSVG from "../../assets/Like.svg";
+import LoudSpeakarSVG from "../../assets/LoudSpeaker.svg";
+
+import Button from "../ui/Button";
 
 function HeroSection() {
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-6 py-10 gap-12">
-      <div className="w-full lg:w-1/2 flex flex-col items-start gap-4 text-start">
-        <p className="text-primary text-sm md:text-base font-semibold leading-none border-primary pl-3">
-          Gain The Fame With The Perfect Channel Name!
-        </p>
+    <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-12 px-4 py-5 md:px-6 md:py-10 lg:flex-row">
+      {/*Content Div*/}
+      <div className="flex w-full flex-col items-start gap-4 text-start md:gap-6 lg:w-5xl">
+        <div className="flex">
+          {/*Div For The Red Line With Pointer*/}
+          <div className="relative flex items-center">
+            <div className="h-0.5 w-12 bg-primary"></div>
+            <div className="-ml-1 h-3 w-3 rounded-full bg-primary"></div>
+          </div>
 
-        <h1 className="text-[33px] md:text-[48px] lg:text-[56px] font-extrabold text-(--font-primary-color) leading-[1.1] tracking-tight">
-          YTNames.com Your Edge in YouTube Success
+          <p className="text-primary border-primary w-60 pl-3 text-sm leading-relaxed md:w-full md:text-base">
+            Gain The Fame With The Perfect Channel Name!
+          </p>
+        </div>
+
+        <h1 className="text-[33px] leading-relaxed font-extrabold tracking-normal text-(--font-primary-color) sm:text-[48px] md:leading-none lg:text-[56px]">
+          <span className="rounded-2xl md:shadow-[inset_0_-12px_0_52px_#D4DDFF]">
+            YTNames.com
+          </span>{" "}
+          Your Edge in YouTube Success
         </h1>
 
-        <p className="text-(--font-secondary-color) text-sm md:text-base leading-relaxed max-w-xl">
-          Are you ready for a channel name that stands out, sparks curiosity, and sets you on a path
-          to fame? Don't settle for the generic output from bland AI name generators. At
-          YTNames.com, we craft truly memorable channel names backed by strategic branding
-          expertise.
+        <p className="w-full text-sm leading-loose text-(--font-secondary-color) md:text-base md:leading-relaxed">
+          Are you ready for a channel name that stands out, sparks curiosity,
+          and sets you on a path to fame? Don’t settle for the generic output
+          from bland AI name generators. At YTNames.com, we craft truly
+          memorable channel names backed by strategic branding expertise—so your
+          YouTube presence takes off from day one.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-6">
-          <Button variant={'secondry'} size={'sm'} className="w-full sm:w-64 font-bold py-4">
-            Pricing Starts From ₹29K
-          </Button>
-          <Button variant={'primary'} size={'sm'} className="w-full sm:w-64 font-bold py-4">
-            Why Your Name Matters
-          </Button>
+        {/*Div For Buttons*/}
+        <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+          <Button variant={"secondry"}>Pricing Starts From ₹29K</Button>
+          <Button variant={"primary"}>Why Your Name Matters</Button>
         </div>
       </div>
 
-      <div className="flex h-full w-full flex-row justify-center relative">
+      {/*Images Div*/}
+      <div className="relative flex h-full w-full flex-row justify-end">
         {/* First Div: Left background icon - Hidden on small screens */}
-        <div className="relative hidden lg:block h-full w-[8%] pt-20">
+        <div className="relative hidden h-full w-[8%] pt-20 lg:block">
           <img
             src={LoudSpeakarSVG}
             alt="LoudSpeaker"
-            className="w-full h-auto object-contain animate-pulse-slow"
+            className="animate-pulse-slow h-auto w-full object-contain"
           />
         </div>
 
         {/* Second Div: Main content - Centered and responsive */}
-        <div className="relative w-full lg:w-[70%] h-75 md:h-112 lg:h-125">
+        <div className="relative h-75 w-full md:h-112 lg:h-125 lg:w-[70%]">
           <img
             src={HeroSectionMainBG}
             alt="BackgroundBlob"
-            className="absolute inset-0 w-full h-full object-contain animate-pulse-slow"
+            className="animate-pulse-slow absolute inset-0 h-full w-full object-contain"
             style={{ zIndex: 1 }}
           />
           <img
             src={HeroSectionCirculerLine}
             alt="BackgroundLine"
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 h-full w-full object-contain"
             style={{ zIndex: 2 }}
           />
           <img
             src={HeroSectionMain}
             alt="MainGirlImage"
-            className="absolute inset-0 w-full h-full object-contain drop-shadow-2xl"
+            className="absolute inset-0 h-full w-full object-contain drop-shadow-2xl"
             style={{ zIndex: 3 }}
           />
         </div>
 
         {/* Third Div: Right background icon - Hidden on small screens */}
-        <div className="relative hidden lg:block h-full w-[8%] pt-20">
+        <div className="relative hidden h-full w-[8%] pt-20 lg:block">
           <img
             src={LikeSVG}
             alt="LikeIcon"
-            className="w-full h-auto object-contain animate-pulse-slow"
+            className="animate-pulse-slow h-auto w-full object-contain"
           />
         </div>
       </div>

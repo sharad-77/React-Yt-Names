@@ -11,15 +11,17 @@ const buttonVariants = cva(
         secondry: 'bg-primary text-white hover:bg-primary/90',
       },
       size: {
-        sm: 'h-8 px-3 text-xs',
-        md: 'h-10 px-4 py-2 text-sm',
-        lg: 'h-12 px-8 text-base',
-        icon: 'h-10 w-10',
+        default:
+          'h-9 px-4 text-xs md:h-10 md:px-6 md:text-sm lg:h-12 lg:px-8 lg:text-md w-full py-5',
+        sm: 'h-8 px-3 text-xs py-5',
+        md: 'h-10 px-4 py-2 text-sm py-5',
+        lg: 'h-12 px-8 text-base py-5',
+        icon: 'h-10 w-10 py-5',
       },
     },
     defaultVariants: {
       variant: 'primary',
-      size: 'md',
+      size: 'lg', 
     },
   }
 );

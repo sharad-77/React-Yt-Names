@@ -12,7 +12,7 @@ function Header() {
   };
 
   return (
-    <header className="relative w-full bg-white max-w-6xl md:rounded-full">
+    <header className="relative w-full bg-white md:rounded-full max-w-7xl">
       <div className="flex md:hidden h-18 px-4 items-center justify-between">
         <button onClick={toggleFunction} className="z-50">
           <img
@@ -36,37 +36,39 @@ function Header() {
           <li className="hover:text-red-600 cursor-pointer">Contact</li>
         </ul>
 
-          <Button variant={'primary'} size={"md"}>Get Stared</Button>
+        <Button variant={'primary'} size={'md'}>
+          Get Stared
+        </Button>
       </div>
 
       {menuToggle && (
         <ul className="absolute top-18 left-1 right-1 p-2 bg-white border-b rounded-b-2xl border-gray-200 flex flex-col md:hidden z-40 animate-in slide-in-from-top">
           <li
-            className="flex justify-center text-lg font-bold pb-2"
+            className="flex justify-center text-md pb-2"
             onClick={toggleFunction}
           >
             Home
           </li>
           <li
-            className="flex justify-center text-lg font-bold pb-2"
+            className="flex justify-center text-md pb-2"
             onClick={toggleFunction}
           >
             Why Choose Us
           </li>
           <li
-            className="flex justify-center text-lg font-bold pb-2"
+            className="flex justify-center text-md pb-2"
             onClick={toggleFunction}
           >
             Testimonials
           </li>
           <li
-            className="flex justify-center text-lg font-bold pb-2"
+            className="flex justify-center text-md pb-2"
             onClick={toggleFunction}
           >
             FAQ
           </li>
           <li
-            className="flex justify-center text-lg font-bold pb-2"
+            className="flex justify-center text-md pb-2"
             onClick={toggleFunction}
           >
             Contact

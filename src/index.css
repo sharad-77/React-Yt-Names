@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 @import "tailwindcss";
 
 
@@ -7,5 +8,10 @@
 
   --font-primary: "Inter", "ui-sans-serif", "system-ui";
   --font-secondary: "Merriweather", "serif";
+
+  --font-primary-color: #101010;
+  --font-secondary-color: #363636;
+
+  --default-font-family: "Onest", ui-sans-serif, system-ui, sans-serif;
 }
 

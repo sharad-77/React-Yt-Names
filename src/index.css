@@ -5,6 +5,7 @@
 @theme{
   --color-primary: #F42330;
   --color-secondary: #3851B2;
+  --color-tertiary: #FFE8E9;
 
   --font-primary: "Inter", "ui-sans-serif", "system-ui";
   --font-secondary: "Merriweather", "serif";

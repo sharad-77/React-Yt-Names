@@ -1,6 +1,4 @@
-import TopActor from "../../assets/TopActor.svg";
-import BottomActor from "../../assets/BottomActor.svg";
-import MainActor from "../../assets/MainActor.svg";
+import { BottomActor, MainActor, TopActor } from "../../assets";
 
 const WhyChoosImage = () => {
   return (

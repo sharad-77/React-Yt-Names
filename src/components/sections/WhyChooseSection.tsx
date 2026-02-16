@@ -1,9 +1,6 @@
-import { FeatureCard } from "../ui/Cards";
-import ThumbUp from "../../assets/ThumbUp.svg";
-import GearInHand from "../../assets/GearInHand.svg";
-import PersonWithStar from "../../assets/PersonWithStar.svg";
-import Spekar from "../../assets/Speaker.svg";
+import { GearInHand, PersonWithStar, Speaker as Spekar, ThumbUp } from "../../assets";
 import WhyChoosImage from "../others/WhyChoosImage";
+import { FeatureCard } from "../ui/Cards";
 
 function WhyChooseSection() {
   return (

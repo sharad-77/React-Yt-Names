@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import MenuSVG from '../../assets/menu.svg';
-import Logo from '../../assets/YT-Names.svg';
-import x from '../../assets/x.svg';
+import { Logo, MenuIcon as MenuSVG, CloseIcon as x } from '../../assets';
 import Button from "../ui/Button";
 
 function Header() {

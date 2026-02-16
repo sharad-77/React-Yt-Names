@@ -1,8 +1,10 @@
+import {
+  HandShake as HandShakeSVG,
+  LineWithStar as LineWithStarSVG,
+  SVGForGridLayout,
+  SVGForSparkCard,
+} from "../../assets";
 import { YoutbeChannelNameReasonsCard } from "../ui/Cards";
-import HandShakeSVG from "../../assets/HandShak.svg";
-import LineWithStarSVG from "../../assets/LineWithStar.svg";
-import SVGForGridLayout from "../../assets/SVGForGridLayout.svg";
-import SVGForSparkCard from "../../assets/SVGForSparkCard.svg";
 
 function ReasonsSection() {
   return (

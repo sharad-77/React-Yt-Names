@@ -1,8 +1,10 @@
-import HeroSectionCirculerLine from "../../assets/HeroSectionCirculerLine.svg";
-import HeroSectionMain from "../../assets/HeroSectionMain.svg";
-import HeroSectionMainBG from "../../assets/HeroSectionMainBG.svg";
-import LikeSVG from "../../assets/Like.svg";
-import LoudSpeakarSVG from "../../assets/LoudSpeaker.svg";
+import {
+  HeroSectionCircularLine as HeroSectionCirculerLine,
+  HeroSectionMain,
+  HeroSectionMainBG,
+  Like as LikeSVG,
+  LoudSpeaker as LoudSpeakarSVG,
+} from "../../assets";
 
 import Button from "../ui/Button";
 

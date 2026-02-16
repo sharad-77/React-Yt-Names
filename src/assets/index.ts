@@ -18,14 +18,22 @@ export { default as PlayButtonIcon } from "./PlayButtonIcon.svg";
 export { default as RightSideArrow } from "./RightSideArrow.svg";
 export { default as SearchStatus } from "./search-status.svg";
 export { default as SendIcon } from "./send.svg";
+export { default as SendBlueIcon } from "./sendBlue.svg";
+export { default as SendPinkIcon } from "./EmptySend.svg";
 export { default as ShareIcon } from "./ShareIcon.svg";
 export { default as SmsIcon } from "./sms.svg";
+export { default as WhiteSmsIcon } from "./WhiteSms.svg";
 export { default as SocialMediaIcon } from "./SocialMediaIcon.svg";
 export { default as Speaker } from "./Speaker.svg";
 export { default as StarBadge } from "./StarBadge.svg";
 export { default as TargetIcon } from "./TargetIcon.svg";
 export { default as ThumbUp } from "./ThumbUp.svg";
 export { default as CloseIcon } from "./x.svg";
+export { default as DownArrow } from "./DownArrow.svg";
+export { default as UpArrow } from "./UpArrow.svg";
+export { default as LinkedinIcon } from "./Linkedin.svg";
+export { default as NavbarSend } from "./navbarSend.svg";
+export { default as PlayButtonIcon2 } from "./play.svg";
 
 // Decorative Elements
 export { default as LineWithStar } from "./LineWithStar.svg";
@@ -49,8 +57,7 @@ export { default as QuestionMarkIllustration } from "./QuestionMarkIllustration.
 export { default as TopActor } from "./TopActor.svg";
 export { default as User2 } from "./User2.svg";
 export { default as User3 } from "./User3.svg";
-export { default as TravelBlogger } from "./Travel-Blogger.svg"
+export { default as TravelBlogger } from "./Travel-Blogger.svg";
 
 // Logo
 export { default as Logo } from "./YT-Names.svg";
-

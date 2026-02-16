@@ -2,7 +2,7 @@ import { GearInHand, PersonWithStar, Speaker as Spekar, ThumbUp } from "../../as
 import WhyChoosImage from "../others/WhyChoosImage";
 import { FeatureCard } from "../ui/Cards";
 
-function WhyChooseSection() {
+export function WhyChooseSection() {
   return (
     <div>
       <div className="flex h-full w-full max-w-7xl flex-col py-15 md:flex-row-reverse md:items-center">
@@ -44,4 +44,3 @@ function WhyChooseSection() {
   );
 }
 
-export default WhyChooseSection;

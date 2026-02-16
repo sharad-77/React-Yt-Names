@@ -40,7 +40,7 @@ const cards = [
   },
 ];
 
-function ClauserSection() {
+export function ClauserSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -99,5 +99,3 @@ function ClauserSection() {
     </div>
   );
 }
-
-export default ClauserSection;

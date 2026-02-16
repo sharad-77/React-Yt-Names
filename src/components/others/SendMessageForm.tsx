@@ -1,0 +1,158 @@
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { PlayButtonIcon, SmsIcon, PhoneIcon } from "../../assets";
+import Button from "../ui/Button";
+
+const contactFormSchema = z.object({
+  name: z
+    .string()
+    .min(2, "Name must be at least 2 characters")
+    .max(50, "Name is too long"),
+  email: z.string().email("Invalid email address"),
+  phone: z
+    .string()
+    .min(10, "Phone number must be at least 10 digits")
+    .regex(/^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/, "Invalid phone number"),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .max(500, "Message is too long"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
+function ContactForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    mode: "onBlur",
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    console.log(data);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    reset();
+  };
+
+  const inputClasses =
+    "focus:border-primary focus:ring-primary w-full rounded-xl sm:rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 text-sm sm:text-base text-black placeholder:text-black font-normal focus:ring-1 focus:outline-none transition-all duration-200";
+
+  const errorInputClasses =
+    "focus:border-red-500 focus:ring-red-500 w-full rounded-xl sm:rounded-2xl border border-red-500 bg-gray-50 px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 text-sm sm:text-base text-black placeholder:text-black font-normal focus:ring-1 focus:outline-none transition-all duration-200";
+
+  const iconWrapperClasses =
+    "absolute right-3 sm:right-4 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center pointer-events-none object-contain";
+  const iconInnerClasses = "h-auto w-full";
+
+  return (
+    <div className="mx-auto flex w-full h-full max-w-150 flex-col items-center justify-center gap-4 rounded-2xl border border-gray-200  p-3 shadow-sm sm:gap-6 sm:rounded-3xl sm:p-4 sm:shadow-md md:gap-8 md:p-6 lg:p-8">
+      <h2 className="px-2 text-center text-2xl font-bold text-(--font-primary-color) sm:text-3xl md:text-4xl ">
+        Send A Message
+      </h2>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+          className="flex w-full max-w-full flex-col gap-4 sm:max-w-md sm:gap-5 md:max-w-lg md:gap-6 lg:max-w-[680px"
+      >
+        <div className="flex flex-col gap-1.5 sm:gap-2">
+          <label className="px-1 text-xs font-medium text-(--font-secondary-color) sm:text-sm">
+            Name
+          </label>
+          <div className="relative flex items-center">
+            <input
+              type="text"
+              {...register("name")}
+              placeholder="Mark"
+              className={errors.name ? errorInputClasses : inputClasses}
+            />
+            <div className={iconWrapperClasses}>
+              <img
+                src={PlayButtonIcon}
+                alt="user"  
+                className="h-3 w-3 object-contain sm:h-4 sm:w-4"
+              />
+            </div>
+          </div>
+          {errors.name && (
+            <p className="px-1 text-xs text-red-500">{errors.name.message}</p>
+          )}
+        </div>
+
+        <div className="flex flex-col gap-1.5 sm:gap-2">
+          <label className="px-1 text-xs font-medium text-(--font-secondary-color) sm:text-sm">
+            Email
+          </label>
+          <div className="relative flex items-center">
+            <input
+              type="email"
+              {...register("email")}
+              placeholder="mark.lee@gmail.com"
+              className={errors.email ? errorInputClasses : inputClasses}
+            />
+            <div className={iconWrapperClasses}>
+              <img src={SmsIcon} alt="email" className={iconInnerClasses} />
+            </div>
+          </div>
+          {errors.email && (
+            <p className="px-1 text-xs text-red-500">{errors.email.message}</p>
+          )}
+        </div>
+
+        <div className="flex flex-col gap-1.5 sm:gap-2">
+          <label className="px-1 text-xs font-medium text-(--font-secondary-color) sm:text-sm">
+            Phone
+          </label>
+          <div className="relative flex items-center">
+            <input
+              type="tel"
+              {...register("phone")}
+              placeholder="+01 123 456 7890"
+              className={errors.phone ? errorInputClasses : inputClasses}
+            />
+            <div className={iconWrapperClasses}>
+              <img src={PhoneIcon} alt="phone" className={iconInnerClasses} />
+            </div>
+          </div>
+          {errors.phone && (
+            <p className="px-1 text-xs text-red-500">{errors.phone.message}</p>
+          )}
+        </div>
+
+        <div className="flex flex-col gap-1.5 sm:gap-2">
+          <label className="px-1 text-xs font-medium text-(--font-secondary-color) sm:text-sm">
+            Message
+          </label>
+          <textarea
+            {...register("message")}
+            placeholder="Write a message"
+            rows={4}
+            className={
+              errors.message
+                ? "w-full resize-none rounded-xl border border-red-500 bg-gray-50 px-3 py-2.5 text-sm text-black transition-all duration-200 placeholder:text-black focus:border-red-500 focus:ring-1 focus:ring-red-500 focus:outline-none sm:rounded-2xl sm:px-4 sm:py-3 sm:text-base"
+                : "focus:border-primary focus:ring-primary w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm text-black transition-all duration-200 placeholder:text-black focus:ring-1 focus:outline-none sm:rounded-2xl sm:px-4 sm:py-3 sm:text-base"
+            }
+          />
+          {errors.message && (
+            <p className="px-1 text-xs text-red-500">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
+
+        <Button
+          variant={"secondry"}
+          disabled={isSubmitting}
+          className="mt-2 w-full sm:w-auto sm:min-w-50"
+        >
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </Button>
+      </form>
+    </div>
+  );
+}
+
+export default ContactForm;

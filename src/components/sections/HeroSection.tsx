@@ -4,11 +4,13 @@ import {
   HeroSectionMainBG,
   Like as LikeSVG,
   LoudSpeaker as LoudSpeakarSVG,
+  SVGForGridLayout,
+  PlayButtonIcon2,
 } from "../../assets";
 
 import Button from "../ui/Button";
 
-function HeroSection() {
+export function HeroSection() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-12 px-4 py-5 md:px-6 md:py-10 lg:flex-row">
       {/*Content Div*/}
@@ -16,8 +18,8 @@ function HeroSection() {
         <div className="flex">
           {/*Div For The Red Line With Pointer*/}
           <div className="relative flex items-center">
-            <div className="h-0.5 w-12 bg-primary"></div>
-            <div className="-ml-1 h-3 w-3 rounded-full bg-primary"></div>
+            <div className="bg-primary h-0.5 w-12"></div>
+            <div className="bg-primary -ml-1 h-3 w-3 rounded-full"></div>
           </div>
 
           <p className="text-primary border-primary w-60 pl-3 text-sm leading-relaxed md:w-full md:text-base">
@@ -56,10 +58,17 @@ function HeroSection() {
             alt="LoudSpeaker"
             className="animate-pulse-slow h-auto w-full object-contain"
           />
+          <div className="mt-50 -ml-10 h-36 w-36">
+            <img
+              src={SVGForGridLayout}
+              alt="SVGForGridLayoutSVG"
+              className="h-full w-full"
+            />
+          </div>
         </div>
 
         {/* Second Div: Main content - Centered and responsive */}
-        <div className="relative h-75 w-full md:h-112 lg:h-125 lg:w-[70%]">
+        <div className="relative h-75 w-full md:h-112 lg:ml-10 lg:h-125 lg:w-[70%]">
           <img
             src={HeroSectionMainBG}
             alt="BackgroundBlob"
@@ -78,6 +87,16 @@ function HeroSection() {
             className="absolute inset-0 h-full w-full object-contain drop-shadow-2xl"
             style={{ zIndex: 3 }}
           />
+          <div
+            className="animate-pulse-slow absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-4 border-white bg-white p-4 shadow-2xl transition-transform hover:scale-100"
+            style={{ zIndex: 4 }}
+          >
+            <img
+              src={PlayButtonIcon2}
+              alt="PlayButtonIcon2"
+              className="h-12 w-12"
+            />
+          </div>
         </div>
 
         {/* Third Div: Right background icon - Hidden on small screens */}
@@ -92,5 +111,3 @@ function HeroSection() {
     </div>
   );
 }
-
-export default HeroSection;

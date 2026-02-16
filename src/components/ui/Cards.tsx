@@ -1,13 +1,19 @@
 import { StarBadge } from "../../assets";
+import { UpArrow, DownArrow } from "../../assets";
 import type {
-  ClauserCardProps,
-  FeatureCardProps,
+  ClauserCardPropsType,
+  FeatureCardPropsType,
+  QNACardPropsType,
 } from "../../interface/CardInterface";
 
-export const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
+export const FeatureCard = ({
+  icon,
+  title,
+  description,
+}: FeatureCardPropsType) => {
   return (
-    <div className="flex w-full  flex-col items-start gap-2 py-2 md:flex-row md:items-center">
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F0F5FF] sm:h-16 sm:w-16">
+    <div className="flex w-full flex-col items-start gap-2 py-2 md:flex-row md:items-center">
+      <div className="bg-bluewhitebg flex h-14 w-14 shrink-0 items-center justify-center rounded-full sm:h-16 sm:w-16">
         <img
           src={icon}
           alt="Card_Icon_SVG"
@@ -32,11 +38,11 @@ export const YoutbeChannelNameReasonsCard = ({
   icon,
   title,
   description,
-}: FeatureCardProps) => {
+}: FeatureCardPropsType) => {
   return (
     <div className="md flex h-auto w-auto flex-col items-center justify-center gap-5 rounded-2xl bg-white p-5 md:h-92 md:w-92">
       <div className="flex flex-row items-start gap-4 md:flex-col">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F0F5FF] p-3">
+        <div className="bg-bluewhitebg flex h-14 w-14 shrink-0 items-center justify-center rounded-full p-3">
           <img
             src={icon}
             alt={`${title} icon`}
@@ -64,9 +70,9 @@ export const ClauserCard = ({
   title,
   description,
   rating,
-}: ClauserCardProps) => {
+}: ClauserCardPropsType) => {
   return (
-    <div className="relative flex md:h-88 max-h-88 min-h-80 w-auto max-w-125 min-w-80 flex-col rounded-3xl border border-[#E8EDF6] pt-12 md:pt-14">
+    <div className="relative flex max-h-88 min-h-80 w-auto max-w-125 min-w-80 flex-col rounded-3xl border border-[#E8EDF6] pt-12 md:h-88 md:pt-14">
       <div className="absolute top-0 left-1/2 z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-x-4 border-t-4 border-b-0 border-[#AABCFF] md:h-24 md:w-24">
         <img
           src={svg}
@@ -94,6 +100,42 @@ export const ClauserCard = ({
             />
           ))}
         </div>
+      </div>
+    </div>
+  );
+};
+
+export const QNACard = ({
+  question,
+  answer,
+  isOpen,
+  onToggle,
+}: QNACardPropsType) => {
+  return (
+    <div
+      className={`flex w-full flex-col gap-4 rounded-2xl px-3 pt-3 pb-5 last:opacity-80 last:blur-[1px] sm:gap-5 sm:px-4 sm:pb-6 ${isOpen ? "bg-tertiary h-auto max-h-80 w-full" : "h-auto max-h-32 max-w-full bg-white"}`}
+    >
+      <div className="flex w-full gap-2">
+        <p className="md:text-md mr-1 w-full text-sm font-semibold sm:text-base xl:text-2xl">
+          {question}
+        </p>
+        <button
+          className="flex w-auto shrink-0 cursor-pointer items-center justify-center px-1"
+          onClick={onToggle}
+        >
+          <img
+            src={`${isOpen ? UpArrow : DownArrow}`}
+            alt="DownArrow"
+            className="h-4 w-4 sm:h-5 sm:w-5"
+          />
+        </button>
+      </div>
+      <div
+        className={`${isOpen ? "flex h-full w-full transition-all duration-300" : "hidden"}`}
+      >
+        <p className="border-primary border-l-3 px-2 text-xs leading-relaxed font-normal sm:text-sm md:text-sm xl:text-lg">
+          {answer}
+        </p>
       </div>
     </div>
   );

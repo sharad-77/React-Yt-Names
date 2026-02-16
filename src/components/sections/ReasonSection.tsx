@@ -6,7 +6,7 @@ import {
 } from "../../assets";
 import { YoutbeChannelNameReasonsCard } from "../ui/Cards";
 
-function ReasonsSection() {
+export function ReasonsSection() {
   return (
     <div className="flex h-full max-h-550 w-full max-w-7xl flex-col items-center justify-center rounded-4xl bg-[#F0F5FF] xl:max-h-280 xl:pt-60">
       <div className="max:h-300 grid h-full w-full grid-cols-1 place-items-center gap-3 p-3 md:grid-cols-2 md:gap-8 md:p-5 lg:p-20 xl:grid-cols-3">
@@ -39,8 +39,8 @@ function ReasonsSection() {
           description="A channel name often serves as the very first touchpoint for viewers. It instantly communicates what your channel is about, conveying your brand’s identity, tone, and value proposition. This helps your channel stand out among millions of others on the platform."
         />
       </div>
-      <div className="flex flex-col xl:flex-row">
-        <div className="hidden xl:block xl:pt-5">
+      <div className="flex flex-col xl:flex-row sm:justify-center sm:items-center">
+        <div className="hidden xl:block xl:pb-30">
           <img src={LineWithStarSVG} alt="LineWithStarSVG" />
         </div>
         <div className="bg-secondary mx-3 flex h-140 w-auto max-w-250 items-center justify-center rounded-4xl border-8 border-white p-5 text-white sm:m-5 md:h-full md:w-full lg:px-15">
@@ -73,12 +73,10 @@ function ReasonsSection() {
             </p>
           </div>
         </div>
-        <div className="hidden xl:block xl:pt-5">
+        <div className="hidden xl:block xl:pb-30">
           <img src={SVGForGridLayout} alt="GridSVG" />
         </div>
       </div>
     </div>
   );
 }
-
-export default ReasonsSection;

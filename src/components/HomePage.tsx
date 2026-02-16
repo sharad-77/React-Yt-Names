@@ -1,17 +1,24 @@
-import { LineWithStar as LineWithStarSVG, WavyLines as VectorSVG } from "../assets";
-import WhyChooseSection from "../components/sections/WhyChooseSection";
-import Header from "./layout/Header";
-import ClauserSection from "./sections/ClauserSection";
-import CTASection from "./sections/CTASection";
-import HeroSection from "./sections/HeroSection";
-import ReasonsSection from "./sections/ReasonSection";
+import {
+  LineWithStar as LineWithStarSVG,
+  WavyLines as VectorSVG,
+} from "../assets";
+import { Header, Footer } from "./layout";
+import {
+  WhyChooseSection,
+  ClauserSection,
+  CTASection,
+  HeroSection,
+  ReasonsSection,
+  QNASection,
+  ContactSection,
+} from "./sections";
 
 function HomePage() {
   return (
     <div className="flex min-h-screen w-full justify-center">
       <div className="flex min-h-screen w-full flex-col items-center bg-white">
         {/*Div For Header And HeroSection Along With Side SVGS*/}
-        <div className="flex w-full flex-col bg-[#F0F5FF] lg:flex-row lg:items-start lg:justify-center ">
+        <div className="bg-bluewhitebg flex w-full flex-col lg:flex-row lg:items-start lg:justify-center">
           <div className="mt-10 hidden h-150 w-[6%] flex-col items-center justify-between py-5 pl-5 lg:flex">
             <img
               src={VectorSVG}
@@ -40,18 +47,33 @@ function HomePage() {
         </div>
 
         {/*Reasons why YouTube channel names section*/}
-        <div className="mb-40 flex h-full w-full justify-center ">
+        <div className="mb-40 flex h-full w-full justify-center">
           <ReasonsSection />
         </div>
 
         {/*Clauser */}
-        <div className="xl:mt-40 flex h-full w-full justify-center ">
+        <div className="flex h-full w-full justify-center xl:mt-40">
           <ClauserSection />
         </div>
 
         {/*CTA Section*/}
-        <div className="xl:mt-40 flex h-full w-full justify-center ">
+        <div className="flex h-full w-full justify-center xl:my-30">
           <CTASection />
+        </div>
+
+        {/*QNA Section */}
+        <div className="mt-100 mb-15 flex h-full w-full flex-col justify-center sm:items-center sm:px-5 lg:mt-0">
+          <QNASection />
+        </div>
+
+        {/*Contact Section */}
+        <div className="lg:py-10 flex h-full w-full flex-col justify-center sm:items-center sm:px-5">
+          <ContactSection />
+        </div>
+
+        {/*Footer Section*/}
+        <div className="flex h-full w-full items-center justify-center md:mt-20">
+          <Footer />
         </div>
       </div>
     </div>

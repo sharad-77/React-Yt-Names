@@ -1,10 +1,10 @@
-import ContactForm from "../others/SendMessageForm";
 import ContactInfo from "../others/ContactInfo";
+import ContactForm from "../others/SendMessageForm";
 
 export function ContactSection() {
   return (
-    <div className="w-full max-w-7xl sm:px-6">
-      <div className="flex h-full w-auto max-w-363 flex-col gap-10 p-2 lg:flex-row">
+    <div className="w-full max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto flex h-full w-full flex-col gap-8 lg:flex-row lg:gap-10">
         <ContactForm />
         <ContactInfo />
       </div>

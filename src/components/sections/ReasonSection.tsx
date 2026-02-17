@@ -9,7 +9,7 @@ import { YoutbeChannelNameReasonsCard } from "../ui/Cards";
 export function ReasonsSection() {
   return (
     <div className="bg-bluewhitebg flex h-full max-h-550 w-full max-w-7xl flex-col items-center justify-center rounded-4xl sm:pt-10 xl:max-h-280 xl:pt-40">
-      <div className="max:h-300 grid h-full w-full grid-cols-1 place-items-center gap-5 p-3 md:grid-cols-2 lg:p-20 xl:grid-cols-3 xl:gap-10">
+      <div className="max:h-300 grid h-full w-full grid-cols-1 place-items-center gap-5 p-3 md:grid-cols-2 md:p-5 lg:p-20 xl:grid-cols-3 xl:gap-10">
         <div className="flex w-auto items-center p-3 py-5 text-3xl font-bold text-(--font-primary-color) sm:py-0 md:w-100 md:text-3xl xl:w-80 xl:text-4xl">
           Here are five top reasons why YouTube channel names matter
         </div>

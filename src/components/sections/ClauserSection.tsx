@@ -65,8 +65,8 @@ export function ClauserSection() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <div className="flex h-full w-full max-w-7xl flex-col gap-4 p-3">
-      <div className="flex h-auto w-full flex-row items-start justify-between p-3">
+    <div className="flex h-full w-full flex-col gap-4 p-3">
+      <div className="mx-auto flex h-auto w-full max-w-7xl flex-row items-start justify-between p-3">
         <div className="flex w-full max-w-153 flex-col items-center gap-5 md:items-start">
           <p className="text-3xl font-bold">What Our Customer Says</p>
           <p className="text-base leading-normal font-medium text-(--font-secondary-color) lg:pr-15">
@@ -93,12 +93,12 @@ export function ClauserSection() {
         </div>
       </div>
 
-      <div className="overflow-hidden px-3 pt-15 pb-6" ref={emblaRef}>
+      <div className="w-full overflow-hidden px-3 pt-15 pb-6" ref={emblaRef}>
         <div className="flex gap-6 md:gap-8">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="min-w-0 flex-[0_0_90%] sm:flex-[0_0_70%] md:flex-[0_0_48%] lg:flex-[0_0_30%]"
+              className="min-w-0 flex-[0_0_300px] sm:flex-[0_0_340px] md:flex-[0_0_370px]"
             >
               <ClauserCard
                 svg={card.img}

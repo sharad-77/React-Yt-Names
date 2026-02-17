@@ -15,7 +15,7 @@ export function Header() {
   };
 
   return (
-    <header className="relative w-full max-w-7xl bg-white lg:rounded-full">
+    <header className="st relative w-full max-w-7xl bg-white lg:rounded-full">
       <div className="flex h-18 items-center justify-between px-4 lg:hidden">
         <button onClick={toggleFunction} className="z-50">
           <img

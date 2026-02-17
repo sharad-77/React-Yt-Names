@@ -40,15 +40,15 @@ function ContactForm() {
   };
 
   const inputClasses =
-    "focus:border-primary focus:ring-primary w-full rounded-xl sm:rounded-2xl border border-gray-200  px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 text-sm sm:text-base text-black placeholder:text-black font-normal focus:ring-1 focus:outline-none transition-all duration-200 ";
+    "focus:border-primary focus:ring-primary w-full rounded-2xl md:rounded-4xl border border-gray-200 px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 text-sm sm:text-base text-semibold text-black placeholder:text-black font-normal focus:ring-1 focus:outline-none transition-all duration-200 shadow-sm";
 
   const errorInputClasses =
-    "focus:border-red-500 focus:ring-red-500 w-full rounded-xl sm:rounded-2xl border border-red-500 bg-gray-50 px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 text-sm sm:text-base text-black placeholder:text-black font-normal focus:ring-1 focus:outline-none transition-all duration-200";
+    "focus:border-red-500 focus:ring-red-500 w-full rounded-2xl md:rounded-4xl border border-red-500 bg-gray-50 px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 text-sm sm:text-base text-semibold text-black placeholder:text-black font-normal focus:ring-1 focus:outline-none transition-all duration-200";
 
   const iconWrapperClasses =
     "absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 flex h-4 w-4 sm:w-5 sm:h-5 items-center justify-center pointer-events-none ";
   return (
-    <div className="mx-auto flex h-full w-full max-w-150 flex-col items-center justify-center gap-4 rounded-2xl border border-gray-200 p-3 shadow-sm sm:gap-6 sm:rounded-3xl sm:p-4 sm:shadow-md md:gap-8 md:p-6 lg:p-8">
+    <div className="mx-auto flex h-full w-full max-w-xl flex-col items-center justify-center gap-4 rounded-2xl border border-gray-200 p-3 shadow-sm sm:gap-6 sm:rounded-3xl sm:p-4 sm:shadow-md md:gap-8 md:p-6 lg:p-8">
       <h2 className="px-2 text-center text-2xl font-bold text-(--font-primary-color) sm:text-3xl md:text-4xl">
         Send A Message
       </h2>

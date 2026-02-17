@@ -1,4 +1,4 @@
-import { UpArrow, DownArrow, StarBadge } from "../../assets/svgs";
+import { DownArrow, StarBadge, UpArrow } from "../../assets/svgs";
 import type {
   ClauserCardPropsType,
   FeatureCardPropsType,
@@ -25,7 +25,7 @@ export const FeatureCard = ({
           {title}
         </h3>
 
-        <p className="font-utendo w-auto text-[16px] leading-7 text-(--font-secondary-color) sm:text-[18px] lg:text-sm lg:leading-snug">
+        <p className="font-utendo w-auto text-[16px] leading-7 text-(--font-secondary-color) sm:text-[18px] lg:text-base lg:leading-snug">
           {description}
         </p>
       </div>
@@ -72,12 +72,20 @@ export const ClauserCard = ({
 }: ClauserCardPropsType) => {
   return (
     <div className="relative flex max-h-90 min-h-80 w-auto min-w-80 flex-col rounded-3xl border border-[#E8EDF6] pt-10 shadow-sm md:h-88 md:pt-14">
-      <div className="absolute top-0 left-1/2 z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-x-4 border-t-4 border-b-0 border-[#AABCFF] md:h-24 md:w-24">
-        <img
-          src={svg}
-          alt={title}
-          className="h-full min-h-full w-full min-w-full scale-[2.2] pt-1 pl-1"
+      <div className="absolute top-0 left-1/2 z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 md:h-24 md:w-24">
+        {/* Border ring — clipped to top half only */}
+        <div
+          className="absolute -inset-1.5 z-20 rounded-full border-6 border-[#AABCFF] md:-inset-2 md:border-8"
+          style={{ clipPath: "inset(0 0 50% 0)" }}
         />
+        {/* Image */}
+        <div className="h-full w-full overflow-hidden rounded-full">
+          <img
+            src={svg}
+            alt={title}
+            className="h-full min-h-full w-full min-w-full scale-[2.2] pt-1 pl-1"
+          />
+        </div>
       </div>
 
       <div className="flex w-full max-w-[490px] flex-col items-center justify-center gap-4 p-2 md:gap-5 md:px-4 md:py-4">
@@ -113,7 +121,7 @@ export const QNACard = ({
   return (
     <div
       onClick={onToggle}
-      className={`flex w-full flex-col gap-4 rounded-2xl p-4 last:opacity-80 last:blur-[1px] sm:gap-5 sm:px-4 sm:pb-6 ${isOpen ? "bg-tertiary h-auto max-h-80 w-full" : "h-auto max-h-32 max-w-full bg-white"}`}
+      className={`flex w-full cursor-pointer flex-col gap-4 rounded-2xl p-4 last:opacity-80 last:blur-[1px] sm:gap-5 sm:px-4 sm:pb-6 ${isOpen ? "bg-tertiary h-auto max-h-80 w-full" : "h-auto max-h-32 max-w-full bg-white"}`}
     >
       <div className="flex w-full items-center justify-center gap-2">
         <p className="mr-1 w-full text-base leading-7 font-semibold text-(--font-secondary-color) lg:text-lg xl:text-xl">
@@ -133,7 +141,7 @@ export const QNACard = ({
       <div
         className={`${isOpen ? "flex h-full w-full transition-all duration-300" : "hidden"}`}
       >
-        <p className="border-primary border-l-3 px-2 text-justify text-sm leading-6 font-normal text-(--font-secondary-color) sm:text-sm md:text-sm lg:text-base ">
+        <p className="border-primary border-l-3 px-2 text-left text-sm leading-6 font-normal text-(--font-secondary-color) sm:text-sm md:text-sm lg:text-base">
           {answer}
         </p>
       </div>

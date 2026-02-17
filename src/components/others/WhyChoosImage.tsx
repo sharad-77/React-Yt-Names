@@ -1,36 +1,45 @@
-import { BottomActor, MainActor, TopActor, LeafDecoration } from "../../assets";
+import {
+  BottomActor,
+  MainActor,
+  TopActor,
+  LeafDecoration,
+} from "../../assets/svgs";
 
 const WhyChoosImage = () => {
   return (
-    <div className="bg-tertiary relative flex aspect-square h-70 w-70 max-w-130 items-center justify-center rounded-r-full md:h-100 md:w-100 lg:h-105 lg:w-105 xl:h-120 xl:w-120">
-      <div className="absolute top-1/2 -z-10 h-[90%] w-[80%] -translate-y-1/2 rounded-r-[100px]" />
+    <div className="bg-tertiary relative flex h-70 w-[95%] items-center justify-end rounded-r-full pr-4 sm:h-90 sm:pr-8 md:h-100 lg:h-120 lg:w-full lg:pr-4">
+      <div className="relative flex aspect-square h-[85%] items-center justify-center">
+        <div className="relative aspect-square h-full overflow-hidden rounded-full border border-white shadow-xl">
+          <img
+            src={MainActor}
+            alt="Main Professional"
+            className="h-full w-full object-cover"
+          />
+        </div>
 
-      <div className="relative aspect-square h-64 w-64 overflow-hidden rounded-full border border-white shadow-xl md:h-85 md:w-85 lg:h-95 lg:w-95 xl:h-100 xl:w-100">
-        <img
-          src={MainActor}
-          alt="Main Professional"
-          className="h-full w-full object-cover"
-        />
-      </div>
+        <div className="absolute -top-[5%] -right-[5%] aspect-square h-[35%] overflow-hidden rounded-full border-4 border-white shadow-lg">
+          <img
+            src={TopActor}
+            alt="Top Creator"
+            className="h-full w-full object-cover"
+          />
+        </div>
 
-      <div className="absolute top-0 right-2 aspect-square h-24 w-24 translate-x-4 overflow-hidden rounded-full border-4 border-white shadow-lg sm:h-32 sm:w-32 md:h-36 md:w-36">
-        <img
-          src={TopActor}
-          alt="Top Creator"
-          className="h-full w-full object-cover"
-        />
-      </div>
+        <div className="absolute -right-[5%] -bottom-[5%] aspect-square h-[35%] overflow-hidden rounded-full border-4 border-white shadow-lg">
+          <img
+            src={BottomActor}
+            alt="Bottom Creator"
+            className="h-full w-full object-cover"
+          />
+        </div>
 
-      <div className="absolute right-0 bottom-4 aspect-square h-24 w-24 translate-x-4 overflow-hidden rounded-full border-4 border-white shadow-lg sm:h-32 sm:w-32 md:h-36 md:w-36">
-        <img
-          src={BottomActor}
-          alt="Bottom Creator"
-          className="h-full w-full object-cover"
-        />
-      </div>
-
-      <div className="hidden lg:block absolute top-3 left-10 -rotate-12 transform text-pink-300 opacity-50">
-        <img src={LeafDecoration} alt="LeafDecoration" />
+        <div className="absolute -top-[5%] -left-[30%] -rotate-12 transform">
+          <img
+            src={LeafDecoration}
+            alt="Leaf"
+            className="w-12 opacity-80 drop-shadow-md sm:w-16"
+          />
+        </div>
       </div>
     </div>
   );

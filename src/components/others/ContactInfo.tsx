@@ -1,12 +1,11 @@
 import {
   LocationIcon,
-  WhiteSmsIcon,
   CallIcon,
   TargetIcon,
   LinkedinIcon,
   CreativityIcon,
   SocialMediaIcon,
-} from "../../assets";
+} from "../../assets/svgs";
 
 const contactDetails = [
   {
@@ -15,7 +14,20 @@ const contactDetails = [
     info: "www.SanskritNames.com",
   },
   {
-    icon: WhiteSmsIcon,
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        className="h-full w-full text-white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <polyline points="22,6 12,13 2,6" />
+      </svg>
+    ),
     title: "Email",
     info: "hi@ytnames.com",
   },
@@ -35,12 +47,12 @@ const socialLinks = [
 
 function ContactInfo() {
   return (
-    <div className="flex h-full w-full flex-col gap-5 p-3 sm:gap-6 sm:p-4 md:gap-7 md:p-5  lg:gap-8 lg:p-6  xl:p-8">
+    <div className="flex h-full w-full flex-col gap-5 p-3 sm:gap-6 sm:p-4 md:gap-7 md:p-5 lg:gap-8 lg:p-6 xl:p-8">
       <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4">
         <h2 className="text-2xl font-bold text-(--font-primary-color) sm:text-3xl md:text-4xl lg:text-5xl">
           Get In Touch
         </h2>
-        <p className="text-xs leading-relaxed text-(--font-secondary-color) sm:text-sm md:text-base max-w-md">
+        <p className="max-w-md text-xs leading-relaxed text-(--font-secondary-color) sm:text-sm md:text-base">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor.
         </p>
@@ -50,11 +62,15 @@ function ContactInfo() {
         {contactDetails.map((detail, index) => (
           <div key={index} className="flex items-start gap-3 sm:gap-4 md:gap-5">
             <div className="bg-secondary flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-all duration-200 hover:scale-105 sm:h-14 sm:w-14 md:h-16 md:w-16">
-              <img
-                src={detail.icon}
-                alt={detail.title}
-                className="h-auto w-auto"
-              />
+              {typeof detail.icon === "string" ? (
+                <img
+                  src={detail.icon}
+                  alt={detail.title}
+                  className="h-6 w-6 sm:h-7 sm:w-7"
+                />
+              ) : (
+                <div className="h-6 w-6 sm:h-7 sm:w-7">{detail.icon}</div>
+              )}
             </div>
 
             <div className="flex flex-col gap-0.5 sm:gap-1 md:gap-1.5">

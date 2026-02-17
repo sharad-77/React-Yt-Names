@@ -1,7 +1,7 @@
 import {
   LineWithStar as LineWithStarSVG,
   WavyLines as VectorSVG,
-} from "../assets";
+} from "../assets/svgs";
 import { Header, Footer } from "./layout";
 import {
   WhyChooseSection,
@@ -32,7 +32,7 @@ function HomePage() {
             />
           </div>
 
-          <div className="flex h-full w-full flex-col items-center justify-start gap-5 md:mt-4">
+          <div className="flex h-full w-full flex-col items-center justify-start gap-5 lg:mt-4">
             <Header />
             <HeroSection />
           </div>
@@ -42,12 +42,12 @@ function HomePage() {
         </div>
 
         {/*Why Choose Seciton*/}
-        <div className="flex h-full w-full items-center justify-center md:pr-4 lg:pt-12">
+        <div className="flex h-full w-full items-center justify-center md:pr-4">
           <WhyChooseSection />
         </div>
 
         {/*Reasons why YouTube channel names section*/}
-        <div className="mb-40 flex h-full w-full justify-center">
+        <div className="mt-10 mb-20 flex h-full w-full justify-center md:mt-0 lg:mb-40">
           <ReasonsSection />
         </div>
 
@@ -57,17 +57,17 @@ function HomePage() {
         </div>
 
         {/*CTA Section*/}
-        <div className="flex h-full w-full justify-center xl:my-30">
+        <div className="flex h-full w-full justify-center lg:mt-10 lg:mb-20">
           <CTASection />
         </div>
 
         {/*QNA Section */}
-        <div className="mt-100 mb-15 flex h-full w-full flex-col justify-center sm:items-center sm:px-5 lg:mt-0">
+        <div className="mt-20 flex h-full w-full flex-col justify-center sm:items-center sm:px-5 lg:mt-0">
           <QNASection />
         </div>
 
         {/*Contact Section */}
-        <div className="lg:py-10 flex h-full w-full flex-col justify-center sm:items-center sm:px-5">
+        <div className="flex h-full w-full flex-col justify-center sm:items-center sm:px-5 lg:py-10">
           <ContactSection />
         </div>
 

@@ -16,4 +16,4 @@ export interface QNACardPropsType {
   answer: string;
   isOpen: boolean;
   onToggle: () => void;
-};
+}

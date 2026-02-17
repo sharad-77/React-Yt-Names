@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   Logo,
   MenuIcon as MenuSVG,
   CloseIcon as x,
   NavbarSend,
-} from "../../assets";
+} from "../../assets/svgs";
 import Button from "../ui/Button";
 
 export function Header() {
@@ -15,20 +15,24 @@ export function Header() {
   };
 
   return (
-    <header className="relative w-full max-w-7xl bg-white md:rounded-full">
-      <div className="flex h-18 items-center justify-between px-4 md:hidden">
+    <header className="relative w-full max-w-7xl bg-white lg:rounded-full">
+      <div className="flex h-18 items-center justify-between px-4 lg:hidden">
         <button onClick={toggleFunction} className="z-50">
           <img
             src={menuToggle ? x : MenuSVG}
             alt="Menu Toggle"
-            className="h-8 w-8"
+            className="h-8 w-8 md:h-12 md:w-12"
           />
         </button>
 
-        <img src={Logo} alt="Logo" className="h-8 w-28 lg:h-10 lg:w-32" />
+        <img
+          src={Logo}
+          alt="Logo"
+          className="h-8 w-28 md:h-12 md:w-36 lg:h-10 lg:w-32"
+        />
       </div>
 
-      <div className="hidden h-20 items-center justify-between px-8 md:flex">
+      <div className="hidden h-20 items-center justify-between px-8 lg:flex">
         <img src={Logo} alt="Logo" className="h-12 w-40" />
 
         <ul className="flex flex-row items-center space-x-5 font-medium text-gray-700 lg:space-x-10">
@@ -47,7 +51,7 @@ export function Header() {
       </div>
 
       {menuToggle && (
-        <ul className="animate-in slide-in-from-top absolute top-18 right-1 left-1 z-40 flex flex-col rounded-b-2xl border-b border-gray-200 bg-white p-2 md:hidden">
+        <ul className="animate-in slide-in-from-top absolute top-18 right-1 left-1 z-40 flex flex-col rounded-b-2xl border-b border-gray-200 bg-white p-2 lg:hidden">
           <li
             className="text-md text-secondary flex cursor-pointer justify-center gap-2 pb-2"
             onClick={toggleFunction}

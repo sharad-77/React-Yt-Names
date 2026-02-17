@@ -1,11 +1,16 @@
 import Button from "../ui/Button";
-import { VectorLine12, AnalyticsIcon, SendBlueIcon ,SendIcon} from "../../assets";
+import {
+  VectorLine12,
+  AnalyticsIcon,
+  SendBlueIcon,
+  SendIcon,
+} from "../../assets/svgs";
 
 export function Footer() {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       {/*Div For Card */}
-      <div className="bg-primary relative z-10 -mb-30 flex h-165 w-[90%] max-w-300 flex-col items-center overflow-hidden rounded-[20px] border-6 border-white p-2 pt-10 text-center mt-20 sm:mt-0 text-white md:rounded-[30px] md:border-12 lg:h-140 lg:rounded-[60px] lg:border-30">
+      <div className="bg-primary relative z-10 mt-20 -mb-30 flex h-165 w-[90%] max-w-300 flex-col items-center overflow-hidden rounded-[20px] border-6 border-white p-2 pt-10 text-center text-white sm:mt-0 md:rounded-[30px] md:border-12 lg:h-140 lg:rounded-[60px] lg:border-30">
         <div className="z-10 flex h-full w-full max-w-200 flex-col items-center justify-between lg:pb-10">
           <p className="text-3xl font-bold">
             Ready to Make a Dent in the Universe?
@@ -39,7 +44,7 @@ export function Footer() {
       </div>
 
       {/*Div For Footer */}
-      <div className="flex md:h-full w-full flex-col items-center rounded-t-xl bg-[#030C30] pt-5 text-center lg:rounded-t-4xl">
+      <div className="flex w-full flex-col items-center rounded-t-xl bg-[#030C30] pt-5 text-center md:h-full lg:rounded-t-4xl">
         <div className="mb-20 flex w-full max-w-7xl flex-row items-center justify-center px-5 pt-40 text-left md:pt-60">
           <img
             src={SendBlueIcon}
@@ -55,7 +60,7 @@ export function Footer() {
           </ul>
           <img src={AnalyticsIcon} alt="Stars" className="hidden lg:block" />
         </div>
-        <div className="flex h-full max-h-37.5 w-full flex-col items-center justify-between ">
+        <div className="flex h-full max-h-37.5 w-full flex-col items-center justify-between">
           <p
             className="border-b-2 border-[#2A3972] bg-clip-text text-6xl font-bold text-transparent sm:text-7xl md:text-9xl lg:text-[160px]"
             style={{
@@ -73,4 +78,3 @@ export function Footer() {
     </div>
   );
 }
-

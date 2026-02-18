@@ -8,9 +8,9 @@ import {
   PlayButtonIcon2,
   SVGForGridLayout,
   WavyLines as VectorSVG,
-} from "../../assets/svgs";
+} from '../../assets/svgs';
 
-import Button from "../ui/Button";
+import Button from '../ui/Button';
 
 export function HeroSection() {
   return (
@@ -45,21 +45,20 @@ export function HeroSection() {
             <h1 className="w-auto text-[40px] leading-14 font-extrabold tracking-normal text-(--font-primary-color) sm:text-[48px] md:leading-none xl:text-[56px]">
               <span className="rounded-2xl md:shadow-[inset_0_-12px_0_52px_#D4DDFF]">
                 YTNames.com
-              </span>{" "}
+              </span>{' '}
               Your Edge in YouTube Success
             </h1>
 
-            <p className="w-auto text-base leading-7.5 text-(--font-secondary-color) md:text-base md:leading-relaxed">
-              Are you ready for a channel name that stands out, sparks
-              curiosity, and sets you on a path to fame? Don't settle for the
-              generic output from bland AI name generators. At YTNames.com, we
-              craft truly memorable channel names backed by strategic branding
+            <p className="w-auto px-2 text-base leading-7.5 font-normal text-(--font-secondary-color) md:text-base md:leading-relaxed">
+              Are you ready for a channel name that stands out, sparks curiosity, and sets you on a
+              path to fame? Don&apos; t settle for the generic output from bland AI name generators.
+              At YTNames.com, we craft truly memorable channel names backed by strategic branding
               expertise—so your YouTube presence takes off from day one.
             </p>
 
-            <div className="flex w-full flex-col justify-center gap-4 sm:flex-row">
-              <Button variant={"secondry"}>Pricing Starts From ₹29K</Button>
-              <Button variant={"primary"}>Why Your Name Matters</Button>
+            <div className="mt-6 flex w-full flex-col justify-center gap-4 sm:flex-row md:mt-0 lg:justify-start">
+              <Button variant={'secondry'}>Pricing Starts From ₹29K</Button>
+              <Button variant={'primary'}>Why Your Name Matters</Button>
             </div>
           </div>
 
@@ -71,11 +70,7 @@ export function HeroSection() {
                 className="animate-pulse-slow h-auto w-full object-contain"
               />
               <div className="mt-50 -ml-10 h-36 w-36">
-                <img
-                  src={SVGForGridLayout}
-                  alt="SVGForGridLayoutSVG"
-                  className="h-full w-full"
-                />
+                <img src={SVGForGridLayout} alt="SVGForGridLayoutSVG" className="h-full w-full" />
               </div>
             </div>
 

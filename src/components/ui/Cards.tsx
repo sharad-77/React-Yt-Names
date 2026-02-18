@@ -1,23 +1,15 @@
-import { DownArrow, StarBadge, UpArrow } from "../../assets/svgs";
+import { DownArrow, StarBadge, UpArrow } from '../../assets/svgs';
 import type {
   ClauserCardPropsType,
   FeatureCardPropsType,
   QNACardPropsType,
-} from "../../interface/CardInterface";
+} from '../../interface/CardInterface';
 
-export const FeatureCard = ({
-  icon,
-  title,
-  description,
-}: FeatureCardPropsType) => {
+export const FeatureCard = ({ icon, title, description }: FeatureCardPropsType) => {
   return (
     <div className="flex w-full flex-col items-start gap-3 lg:flex-row lg:items-center">
       <div className="bg-bluewhitebg flex h-15 w-15 shrink-0 items-center justify-center rounded-full sm:h-18 sm:w-18">
-        <img
-          src={icon}
-          alt="Card_Icon_SVG"
-          className="h-3/5 w-3/5 object-contain"
-        />
+        <img src={icon} alt="Card_Icon_SVG" className="h-3/5 w-3/5 object-contain" />
       </div>
 
       <div className="flex flex-col gap-2 lg:gap-1">
@@ -39,24 +31,20 @@ export const YoutbeChannelNameReasonsCard = ({
   description,
 }: FeatureCardPropsType) => {
   return (
-    <div className="md flex h-auto w-auto flex-col gap-5 rounded-2xl bg-white p-5 shadow-xs md:h-92 md:w-92">
+    <div className="md flex h-auto w-auto flex-col gap-5 rounded-2xl bg-white p-5 shadow-xs md:h-92 md:w-92 md:gap-2 lg:gap-4 xl:gap-3">
       <div className="flex flex-row items-center justify-start gap-4 md:flex-col md:items-start">
         <div className="bg-bluewhitebg flex h-14 w-14 shrink-0 items-center justify-center rounded-full p-3">
-          <img
-            src={icon}
-            alt={`${title} icon`}
-            className="h-full w-full object-contain"
-          />
+          <img src={icon} alt={`${title} icon`} className="h-full w-full object-contain" />
         </div>
 
-        <h3 className="w-46 text-xl leading-tight font-bold tracking-tight text-(--font-primary-color) sm:text-2xl md:w-80 lg:w-85">
+        <h3 className="w-full text-xl leading-tight font-bold tracking-tight text-(--font-primary-color) sm:text-2xl">
           {title}
         </h3>
       </div>
 
       {/* Description: Removed the centering to keep it professional */}
-      <div className="">
-        <p className="font-utendo text-sm leading-relaxed text-(--font-primary-color) opacity-80 lg:text-base">
+      <div className="h-full w-full">
+        <p className="font-utendo text-base leading-6 text-[#565656] md:leading-7 lg:text-base xl:text-[17px]">
           {description}
         </p>
       </div>
@@ -64,19 +52,14 @@ export const YoutbeChannelNameReasonsCard = ({
   );
 };
 
-export const ClauserCard = ({
-  svg,
-  title,
-  description,
-  rating,
-}: ClauserCardPropsType) => {
+export const ClauserCard = ({ svg, title, description, rating }: ClauserCardPropsType) => {
   return (
     <div className="relative flex max-h-90 min-h-80 w-auto min-w-80 flex-col rounded-3xl border border-[#E8EDF6] pt-10 shadow-sm md:h-88 md:pt-14">
       <div className="absolute top-0 left-1/2 z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 md:h-24 md:w-24">
         {/* Border ring — clipped to top half only */}
         <div
           className="absolute -inset-1.5 z-20 rounded-full border-6 border-[#AABCFF] md:-inset-2 md:border-8"
-          style={{ clipPath: "inset(0 0 50% 0)" }}
+          style={{ clipPath: 'inset(0 0 50% 0)' }}
         />
         {/* Image */}
         <div className="h-full w-full overflow-hidden rounded-full">
@@ -99,12 +82,7 @@ export const ClauserCard = ({
 
         <div className="flex flex-row gap-1 pb-6">
           {Array.from({ length: rating }, (_, i) => (
-            <img
-              key={i}
-              src={StarBadge}
-              alt="star"
-              className="h-6 w-6 md:h-7 md:w-7"
-            />
+            <img key={i} src={StarBadge} alt="star" className="h-6 w-6 md:h-7 md:w-7" />
           ))}
         </div>
       </div>
@@ -112,39 +90,33 @@ export const ClauserCard = ({
   );
 };
 
-export const QNACard = ({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: QNACardPropsType) => {
+export const QNACard = ({ question, answer, isOpen, onToggle }: QNACardPropsType) => {
   return (
     <div
       onClick={onToggle}
-      className={`flex w-full cursor-pointer flex-col gap-4 rounded-2xl p-4 last:opacity-80 last:blur-[1px] sm:gap-5 sm:px-4 sm:pb-6 ${isOpen ? "bg-tertiary h-auto max-h-80 w-full" : "h-auto max-h-32 max-w-full bg-white"}`}
+      className={`flex w-full cursor-pointer flex-col rounded-2xl p-4 transition-all duration-300 last:opacity-80 last:blur-[1px] ${
+        isOpen ? 'bg-tertiary gap-4' : 'gap-0 bg-white'
+      }`}
     >
-      <div className="flex w-full items-center justify-center gap-2">
-        <p className="mr-1 w-full text-base leading-7 font-semibold text-(--font-secondary-color) lg:text-lg xl:text-xl">
+      <div className="flex w-full items-center justify-between gap-2">
+        <p className="w-full text-base leading-7 font-semibold text-(--font-secondary-color) lg:text-lg xl:text-lg">
           {question}
         </p>
-        <button
-          className="flex w-auto shrink-0 cursor-pointer items-center justify-center px-1"
-          onClick={onToggle}
-        >
+        <div className="flex w-auto shrink-0 items-center justify-center px-1">
           <img
             src={`${isOpen ? UpArrow : DownArrow}`}
-            alt="DownArrow"
+            alt="Toggle Arrow"
             className="h-4 w-4 sm:h-5 sm:w-5"
           />
-        </button>
+        </div>
       </div>
-      <div
-        className={`${isOpen ? "flex h-full w-full transition-all duration-300" : "hidden"}`}
-      >
-        <p className="border-primary border-l-3 px-2 text-left text-sm leading-6 font-normal text-(--font-secondary-color) sm:text-sm md:text-sm lg:text-base">
-          {answer}
-        </p>
-      </div>
+      {isOpen && (
+        <div className="animate-in fade-in slide-in-from-top-1 flex w-full duration-200">
+          <p className="border-primary border-l-3 px-2 text-left text-sm leading-6 font-normal text-(--font-secondary-color) sm:text-sm md:text-sm lg:text-base">
+            {answer}
+          </p>
+        </div>
+      )}
     </div>
   );
 };

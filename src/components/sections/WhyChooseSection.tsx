@@ -1,18 +1,13 @@
-import {
-  GearInHand,
-  PersonWithStar,
-  Speaker as Spekar,
-  ThumbUp,
-} from "../../assets/svgs";
-import WhyChoosImage from "../others/WhyChoosImage";
-import { FeatureCard } from "../ui/Cards";
+import { GearInHand, PersonWithStar, Speaker as Spekar, ThumbUp } from '../../assets/svgs';
+import WhyChoosImage from '../others/WhyChoosImage';
+import { FeatureCard } from '../ui/Cards';
 
 export function WhyChooseSection() {
   return (
-    <section className="w-full overflow-hidden py-8 sm:py-10">
+    <section className="w-full overflow-hidden py-5 sm:py-8 md:py-10">
       <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-10">
         <div className="flex w-full justify-start lg:w-1/2">
-          <div className="w-full max-w-160 px-4 py-10 sm:px-6 md:px-10">
+          <div className="w-full max-w-160 px-4 sm:px-6 md:px-10 md:py-10">
             <p className="w-full text-start text-[30px] font-bold text-(--font-primary-color) md:text-3xl">
               Why Choose a YouTube Channel Naming Consultant?
             </p>
@@ -41,7 +36,7 @@ export function WhyChooseSection() {
           </div>
         </div>
 
-        <div className="flex h-full w-full lg:w-1/2">
+        <div className="mt-10 flex h-full w-full md:mt-15 lg:mt-0 lg:w-1/2">
           <WhyChoosImage />
         </div>
       </div>

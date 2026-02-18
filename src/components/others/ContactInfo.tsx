@@ -5,13 +5,13 @@ import {
   LinkedinIcon,
   CreativityIcon,
   SocialMediaIcon,
-} from "../../assets/svgs";
+} from '../../assets/svgs';
 
 const contactDetails = [
   {
     icon: LocationIcon,
-    title: "Address",
-    info: "www.SanskritNames.com",
+    title: 'Address',
+    info: 'www.SanskritNames.com',
   },
   {
     icon: (
@@ -28,21 +28,21 @@ const contactDetails = [
         <polyline points="22,6 12,13 2,6" />
       </svg>
     ),
-    title: "Email",
-    info: "hi@ytnames.com",
+    title: 'Email',
+    info: 'hi@ytnames.com',
   },
   {
     icon: CallIcon,
-    title: "Phone Number",
-    info: "+91 85888 51555",
+    title: 'Phone Number',
+    info: '+91 85888 51555',
   },
 ];
 
 const socialLinks = [
-  { icon: TargetIcon, alt: "Instagram", link: "#" },
-  { icon: LinkedinIcon, alt: "LinkedIn", link: "#" },
-  { icon: CreativityIcon, alt: "Twitter", link: "#" },
-  { icon: SocialMediaIcon, alt: "Facebook", link: "#" },
+  { icon: TargetIcon, alt: 'Instagram', link: '#' },
+  { icon: LinkedinIcon, alt: 'LinkedIn', link: '#' },
+  { icon: CreativityIcon, alt: 'Twitter', link: '#' },
+  { icon: SocialMediaIcon, alt: 'Facebook', link: '#' },
 ];
 
 function ContactInfo() {
@@ -53,8 +53,8 @@ function ContactInfo() {
           Get In Touch
         </h2>
         <p className="max-w-md text-xs leading-relaxed text-(--font-secondary-color) sm:text-sm md:text-base">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+          dolor.
         </p>
       </div>
 
@@ -62,12 +62,8 @@ function ContactInfo() {
         {contactDetails.map((detail, index) => (
           <div key={index} className="flex items-start gap-3 sm:gap-4 md:gap-5">
             <div className="bg-secondary flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-all duration-200 hover:scale-105 sm:h-14 sm:w-14 md:h-16 md:w-16">
-              {typeof detail.icon === "string" ? (
-                <img
-                  src={detail.icon}
-                  alt={detail.title}
-                  className="h-6 w-6 sm:h-7 sm:w-7"
-                />
+              {typeof detail.icon === 'string' ? (
+                <img src={detail.icon} alt={detail.title} className="h-6 w-6 sm:h-7 sm:w-7" />
               ) : (
                 <div className="h-6 w-6 sm:h-7 sm:w-7">{detail.icon}</div>
               )}

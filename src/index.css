@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Utendo";
+  font-family: 'Utendo';
   src:
-    url("./assets/fonts/Utendo-Regular.woff") format("woff"),
-    url("./assets/fonts/Utendo-Bold.woff") format("woff");
+    url('./assets/fonts/Utendo-Regular.woff') format('woff'),
+    url('./assets/fonts/Utendo-Bold.woff') format('woff');
 }
 
 @theme {
@@ -15,8 +15,8 @@
   --color-tertiary: #ffe8e9;
   --color-bluewhitebg: #f0f5ff;
 
-  --font-onest: "Onest", ui-sans-serif, system-ui, sans-serif;
-  --font-utendo: "Utendo";
+  --font-onest: 'Onest', ui-sans-serif, system-ui, sans-serif;
+  --font-utendo: 'Utendo';
 
   --font-primary-color: #101010;
   --font-secondary-color: #363636;

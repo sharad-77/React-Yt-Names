@@ -1,4 +1,4 @@
-import { Footer, Header } from "./layout";
+import { Footer, Header } from './layout';
 import {
   ClauserSection,
   ContactSection,
@@ -7,7 +7,7 @@ import {
   QNASection,
   ReasonsSection,
   WhyChooseSection,
-} from "./sections";
+} from './sections';
 
 function HomePage() {
   return (
@@ -22,17 +22,17 @@ function HomePage() {
         </div>
 
         {/*Why Choose Section*/}
-        <div className="flex h-full w-full items-center justify-center py-10">
+        <div className="flex h-full w-full items-center justify-center py-10 lg:py-0">
           <WhyChooseSection />
         </div>
 
         {/*Reasons why YouTube channel names section*/}
-        <div className="flex h-full w-full justify-center py-10">
+        <div className="mt-10 mb-10 flex h-full w-full justify-center md:mb-10">
           <ReasonsSection />
         </div>
 
         {/*Clauser */}
-        <div className="flex h-full w-full justify-center py-10 lg:pt-50 lg:pb-10">
+        <div className="flex h-full w-full justify-center md:py-10 xl:pt-50 xl:pb-10">
           <ClauserSection />
         </div>
 
@@ -42,17 +42,17 @@ function HomePage() {
         </div>
 
         {/*QNA Section */}
-        <div className="flex h-full w-full flex-col justify-center px-4 py-10 sm:items-center sm:px-6">
+        <div className="flex h-full w-full flex-col justify-center py-10 sm:items-center sm:px-6 md:px-4">
           <QNASection />
         </div>
 
         {/*Contact Section */}
-        <div className="flex h-full w-full flex-col justify-center px-4 py-10 sm:items-center sm:px-6">
+        <div className="flex h-full w-full flex-col justify-center py-5 sm:items-center sm:px-6 md:px-4">
           <ContactSection />
         </div>
 
         {/*Footer Section*/}
-        <div className="flex h-full w-full items-center justify-center pt-10 lg:pt-16">
+        <div className="flex h-full w-full items-center justify-center xl:pt-16">
           <Footer />
         </div>
       </div>

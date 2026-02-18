@@ -1,11 +1,6 @@
-import { useState } from "react";
-import {
-  Logo,
-  MenuIcon as MenuSVG,
-  CloseIcon as x,
-  NavbarSend,
-} from "../../assets/svgs";
-import Button from "../ui/Button";
+import { useState } from 'react';
+import { Logo, MenuIcon as MenuSVG, CloseIcon as x, NavbarSend } from '../../assets/svgs';
+import Button from '../ui/Button';
 
 export function Header() {
   const [menuToggle, setMenuToggle] = useState<boolean>(false);
@@ -25,11 +20,7 @@ export function Header() {
           />
         </button>
 
-        <img
-          src={Logo}
-          alt="Logo"
-          className="h-8 w-28 md:h-12 md:w-36 lg:h-10 lg:w-32"
-        />
+        <img src={Logo} alt="Logo" className="h-8 w-28 md:h-12 md:w-36 lg:h-10 lg:w-32" />
       </div>
 
       <div className="hidden h-20 items-center justify-between px-8 lg:flex">
@@ -45,7 +36,7 @@ export function Header() {
           <li className="hover:text-secondary cursor-pointer">Contact</li>
         </ul>
 
-        <Button variant={"primary"} size={"md"}>
+        <Button variant={'primary'} size={'md'}>
           Get Stared
         </Button>
       </div>
@@ -59,28 +50,16 @@ export function Header() {
             <img src={NavbarSend} alt="NavbarSend" />
             Home
           </li>
-          <li
-            className="text-md flex justify-center pb-2"
-            onClick={toggleFunction}
-          >
+          <li className="text-md flex justify-center pb-2" onClick={toggleFunction}>
             Why Choose Us
           </li>
-          <li
-            className="text-md flex justify-center pb-2"
-            onClick={toggleFunction}
-          >
+          <li className="text-md flex justify-center pb-2" onClick={toggleFunction}>
             Testimonials
           </li>
-          <li
-            className="text-md flex justify-center pb-2"
-            onClick={toggleFunction}
-          >
+          <li className="text-md flex justify-center pb-2" onClick={toggleFunction}>
             FAQ
           </li>
-          <li
-            className="text-md flex justify-center pb-2"
-            onClick={toggleFunction}
-          >
+          <li className="text-md flex justify-center pb-2" onClick={toggleFunction}>
             Contact
           </li>
         </ul>

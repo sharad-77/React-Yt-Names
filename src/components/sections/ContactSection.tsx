@@ -1,5 +1,5 @@
-import ContactInfo from "../others/ContactInfo";
-import ContactForm from "../others/SendMessageForm";
+import ContactInfo from '../others/ContactInfo';
+import ContactForm from '../others/SendMessageForm';
 
 export function ContactSection() {
   return (

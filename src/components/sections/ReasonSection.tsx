@@ -3,14 +3,14 @@ import {
   LineWithStar as LineWithStarSVG,
   SVGForGridLayout,
   SVGForSparkCard,
-} from "../../assets/svgs";
-import { YoutbeChannelNameReasonsCard } from "../ui/Cards";
+} from '../../assets/svgs';
+import { YoutbeChannelNameReasonsCard } from '../ui/Cards';
 
 export function ReasonsSection() {
   return (
-    <div className="bg-bluewhitebg flex h-full max-h-550 w-full max-w-7xl flex-col items-center justify-center rounded-4xl sm:pt-10 xl:max-h-280 xl:pt-40">
-      <div className="max:h-300 grid h-full w-full grid-cols-1 place-items-center gap-5 p-3 md:grid-cols-2 md:p-5 lg:p-20 xl:grid-cols-3 xl:gap-10">
-        <div className="flex w-auto items-center p-3 py-5 text-3xl font-bold text-(--font-primary-color) sm:py-0 md:w-100 md:text-3xl xl:w-80 xl:text-4xl">
+    <div className="bg-bluewhitebg flex h-full w-full max-w-7xl flex-col items-center justify-center rounded-4xl xl:max-h-280 xl:pt-40">
+      <div className="max:h-300 grid h-full w-full grid-cols-1 place-items-center gap-5 p-3 md:grid-cols-2 md:gap-10 md:p-7 lg:px-30 xl:grid-cols-3 xl:gap-10 xl:p-15">
+        <div className="flex w-auto items-center px-3 pt-5 text-3xl font-bold text-(--font-primary-color) md:w-100 md:pt-0 md:text-3xl xl:w-90 xl:text-4xl">
           Here are five top reasons why YouTube channel names matter
         </div>
         <YoutbeChannelNameReasonsCard
@@ -44,33 +44,28 @@ export function ReasonsSection() {
         <div className="hidden xl:block xl:pb-30">
           <img src={LineWithStarSVG} alt="LineWithStarSVG" />
         </div>
-        <div className="bg-secondary mx-3 mt-15 flex h-140 w-auto max-w-250 items-center justify-center rounded-4xl border-4 border-white p-5 text-white sm:m-5 sm:border-8 md:h-full md:w-full lg:mt-0 lg:px-15">
+        <div className="bg-secondary mx-3 mt-15 flex h-140 w-auto max-w-250 items-center justify-center rounded-[20px] border-4 border-white p-5 text-white sm:m-5 sm:border-8 md:h-full md:w-full md:rounded-4xl lg:mt-0 lg:px-15">
           <div className="relative flex flex-col items-center justify-center gap-5">
             <img
               src={SVGForSparkCard}
               alt="Background Line"
               className="absolute inset-0 z-0 h-full w-full object-contain opacity-100"
             />
-            <p className="z-10 text-3xl font-bold text-[#F0F0F0] md:text-5xl">
-              A Spark of Glory
+            <p className="z-10 text-3xl font-bold text-[#F0F0F0] md:text-5xl">A Spark of Glory</p>
+
+            <p className="z-10 text-center text-base leading-7 text-[#F0F0F0]">
+              A seed of vision, a dream to proclaim, Your voice in thess making, ready to flame. A
+              stage awaits, where you’ll rise to acclaim Gain the fame with the perfect channel name
             </p>
 
             <p className="z-10 text-center text-base leading-7 text-[#F0F0F0]">
-              A seed of vision, a dream to proclaim, Your voice in thess making,
-              ready to flame. A stage awaits, where you’ll rise to acclaim Gain
-              the fame with the perfect channel name
+              In endless scrolls of clicks and views, A single spark can banish the blues. We craft
+              each word, we shape each vow, So brilliance shines upon you now.
             </p>
 
             <p className="z-10 text-center text-base leading-7 text-[#F0F0F0]">
-              In endless scrolls of clicks and views, A single spark can banish
-              the blues. We craft each word, we shape each vow, So brilliance
-              shines upon you now.
-            </p>
-
-            <p className="z-10 text-center text-base leading-7 text-[#F0F0F0]">
-              Let waves of watchers turn their gaze, As your chosen name carves
-              brand-new ways. Seize your moment, claim your throne A perfect
-              name to call your own.
+              Let waves of watchers turn their gaze, As your chosen name carves brand-new ways.
+              Seize your moment, claim your throne A perfect name to call your own.
             </p>
           </div>
         </div>
